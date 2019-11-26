@@ -44,7 +44,22 @@
         width: 343px;
         margin: 0 auto;
 
-        button {
+        // button {
+        //   display: block;
+        //   height: 50px;
+        //   width :343px;
+        //   margin:0 auto 20px;
+        //   border-radius: 10px;
+        //   font-size:13px;
+        //   text-decoration: none;
+        //   text-align: center;
+        //   line-height: 50px;
+        //   position: relative;
+        // } 
+
+        #email{
+          background-color: #ea352d;
+          color: #fff;
           display: block;
           height: 50px;
           width :343px;
@@ -55,12 +70,8 @@
           text-align: center;
           line-height: 50px;
           position: relative;
-        } 
-
-        #email{
-          background-color: #ea352d;
-          color: #fff;
         }
+
 
           .mail-icon {
             font-size: 20px;
@@ -74,7 +85,17 @@
         #facebook {
           color: white;
           background-color: #385185;
-          margin-top: 16px; 
+          margin-top: 16px;
+          display: block;
+          height: 50px;
+          width :343px;
+          margin:0 auto 20px;
+          border-radius: 10px;
+          font-size:13px;
+          text-decoration: none;
+          text-align: center;
+          line-height: 50px;
+          position: relative; 
         }
         .facebook-icon{
           font-size: 20px;
@@ -87,6 +108,16 @@
           color: black;
           background-color: white no-repeat 3px top;
           margin-top: 16px;
+          display: block;
+          height: 50px;
+          width :343px;
+          margin:0 auto 20px;
+          border-radius: 10px;
+          font-size:13px;
+          text-decoration: none;
+          text-align: center;
+          line-height: 50px;
+          position: relative;
         }
         .google-icon{
           font-size: 20px;
