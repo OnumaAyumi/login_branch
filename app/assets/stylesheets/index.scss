@@ -120,51 +120,6 @@
       }
     }
   }
-
-
-
-  .footer {
-    background: rgb(245, 245, 245);
-    width: 456px;
-    height: 220px;
-    margin: 0 auto;
-    padding: 40px 0;
-
-    ul {
-      list-style: none;
-    }
-
-    li {
-      display: inline-block;
-      margin: 0 0 0 16px;
-      font-size: 12px;
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    }
-
-
-    & li:first-child {
-      display: inline-block;
-      margin: 0;
-    }
-
-    p {
-      margin: 8px 0 0;
-
-      small {
-        font-size: 13px;
-      }
-    }
-
-
-    &__logo img {
-      width: 80px;
-      height: 65px;
-      margin: 40px auto 0;
-    }
-  }
 }
 
 
