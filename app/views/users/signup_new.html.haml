@@ -1,30 +1,30 @@
 %header.signup-header
   .signup-header__containar
-    %h1
-      %a
-        = image_tag "/assets/SVG/fmarket_logo_red.svg", alt: "Mercari"
+    %h1.signup-header__containar__title
+      .signup-header__containar__title__img
+        = image_tag "/assets/SVG/fmarket_logo_red.svg", alt: "Mercari",class: "sign-up_img"
 
 
-    %nav.signup-bar
-      %ol
-        %li.li--active
+    %nav.signup-bar-0
+      %ol.signup-bar-0__to
+        %li.li--active-0
           会員情報
-          .progress-status1
-        %li.li
+          .progress-status1-0
+        %li.signup-bar-0__to-do
           電話番号認証
-          .progress-status2
-        %li
+          .progress-status2-0
+        %li.signup-bar-0__to-do
           お届け先住所入力
-          .progress-status3
-        %li
+          .progress-status3-0
+        %li.signup-bar-0__to-do
           支払い方法
-          .progress-status4
-        %li
+          .progress-status4-0
+        %li.signup-bar-0__to-do
           完了
-          .progress-status5
+          .progress-status5-0
 
 .container-login-signin
-  .main
+  .signup-main-0
 
     .signup-panel
       %p.signup-panel__title 会員情報登録
@@ -91,29 +91,29 @@
                 必須
           .signup-panel__inherit__form-group__birthday
             .signup-panel__inherit__form-group__birthday__1
-              .birthday__icon
-                🔻
               %select{name: "year", class: "select"}
                 %option{value: ""}--
                 %option{value: "2019"} 2019
                 %option{value: "2018"} 2018
+              .birthday__icon
+                %i.fas.fa-angle-down
             年
 
             .signup-panel__inherit__form-group__birthday__2
-              .birthday__icon
-                🔻
               %select{name: "month", class: "select"}
                 %option{value: ""}--
                 %option{value: "1"} 1
                 %option{value: "2"} 2
+              .birthday__icon
+                %i.fas.fa-angle-down
             月
             .signup-panel__inherit__form-group__birthday__3
-              .birthday__icon
-                🔻
               %select{name: "date", class: "select"}
                 %option{value: ""}--
                 %option{value: "1"} 1
                 %option{value: "2"} 2
+              .birthday__icon
+                %i.fas.fa-angle-down
             日
 
         %p.caution
@@ -123,7 +123,6 @@
           %input.not-lobot__hidden
           .not-lobot__form-group
             .not-lobo__form-group__main
-            -# %input.not-lobot__hidden2
 
           .signup-panel__inherit__form-group__description
             %p.signup-panel__inherit__form-group__description__text
@@ -132,23 +131,24 @@
               に同意したものとみなします
 
           %button.next-current_page
-            次へ進む
-
+            =link_to "/users/phone",class: "next-page-1" do
+              次へ進む
+            
           .signup-panel__inherit__form-group__text
             %p.description
               %a.description__link{href: ''}本人の情報登録について＞
 
 %footer.user-footer
   %nav
-    %ul
-      %li
-        %a プライバシーポリシー 
-      %li
-        %a Fmarket利用規約
-      %li
-        %a 特定商品に関する表記 
-  %a
+    %ul.user-footer-container
+      %li.user-footer-menu
+        .user-footer-menu__1 プライバシーポリシー 
+      %li.user-footer-menu
+        .user-footer-menu__1 Fmarket利用規約
+      %li.user-footer-menu
+        .user-footer-menu__1 特定商品に関する表記 
+  .user-footer__link
     = link_to root_path do
-      = image_tag "/assets/SVG/logo_gray.svg", alt: "Mercari", width: "80", height: "60"  
-    %p 
-      %small ©︎2019 Fmarket
+      = image_tag "/assets/SVG/logo_gray.svg", alt: "Mercari", class:".user-footer-img", width: "80", height: "60"  
+    %p.user-footer__end
+      %small.user-footer__year ©︎2019 Fmarket

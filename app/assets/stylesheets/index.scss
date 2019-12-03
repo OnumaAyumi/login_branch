@@ -1,17 +1,21 @@
-.user-header {
+.signup-header-new{
   background: rgb(245, 245, 245);
   height: 128px;
   text-align: center;
-  h1 {
+  &__containar{
     background: rgb(245, 245, 245);
-    padding: 40px 0 0;
-    a {
-      width: 185px;
-      height: 49px;
-      line-height: 49px;
-      img {
+    .signup-header-new-panel{
+      background: rgb(245, 245, 245);
+      padding: 40px 0 0;
+      .signup-header-new-icon{
         width: 185px;
         height: 49px;
+        line-height: 49px;
+        margin: 0 auto;
+        .sign-up-new-img{
+          width: 185px;
+          height: 49px;
+        }
       }
     }
   }
@@ -21,7 +25,7 @@
   background: rgb(245, 245, 245);
   text-align: center;
 
-  .main {
+  &__main {
     .signup-panel {
       max-width: 700px;
       margin: 0 auto;
@@ -43,23 +47,9 @@
         height: 182px;
         width: 343px;
         margin: 0 auto;
-
-        // button {
-        //   display: block;
-        //   height: 50px;
-        //   width :343px;
-        //   margin:0 auto 20px;
-        //   border-radius: 10px;
-        //   font-size:13px;
-        //   text-decoration: none;
-        //   text-align: center;
-        //   line-height: 50px;
-        //   position: relative;
-        // } 
-
+        
         #email{
           background-color: #ea352d;
-          color: #fff;
           display: block;
           height: 50px;
           width :343px;
@@ -70,18 +60,20 @@
           text-align: center;
           line-height: 50px;
           position: relative;
-        }
-
-
-          .mail-icon {
-            font-size: 20px;
-            position: absolute;
-            top: 13px;
-            left: 15px;
+        
+          .signup-new__link{
             color: #fff;
-            background-color: #ea352d;
+            text-decoration: none;
+            .mail-icon {
+              font-size: 20px;
+              position: absolute;
+              top: 13px;
+              left: 15px;
+              color: #fff;
+              background-color: #ea352d;
+            }
           }
-                     
+        }          
         #facebook {
           color: white;
           background-color: #385185;
@@ -183,34 +175,34 @@
   height: 220px;
   margin: 0 auto;
   padding: 40px 0;
-  ul {
+  .user-footer-container {
     list-style: none;
   }
-  li {
+  .user-footer-menu{
     display: inline-block;
     margin: 0 0 0 16px;
     font-size: 12px;
-    a {
+    &__1{
       text-decoration: none;
       color: black;
     }
   }
 
-  & li:first-child {
+  li:first-child {
     display: inline-block;
     margin: 0;
   }
-  a {
-    img {
+  .user-footer__link {
+    .user-footer-img{
       width: 80px;
       height: 65px;
       margin: 40px auto 0;
     }
   }
-  p {
+  .user-footer__end{
     margin: 8px 0 0;
 
-    small {
+    .user-footer__year{
       font-size: 13px;
     }
   }
