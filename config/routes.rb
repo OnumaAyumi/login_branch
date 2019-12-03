@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'users#index'
 
-  resources :users do
+  resources :users ,except: :destroy do
     collection do 
       get "signup_new"
       get "phone"
