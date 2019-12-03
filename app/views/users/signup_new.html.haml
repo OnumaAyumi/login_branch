@@ -1,0 +1,154 @@
+%header.signup-header
+  .signup-header__containar
+    %h1.signup-header__containar__title
+      .signup-header__containar__title__img
+        = image_tag "/assets/SVG/fmarket_logo_red.svg", alt: "Mercari",class: "sign-up_img"
+
+
+    %nav.signup-bar-0
+      %ol.signup-bar-0__to
+        %li.li--active-0
+          会員情報
+          .progress-status1-0
+        %li.signup-bar-0__to-do
+          電話番号認証
+          .progress-status2-0
+        %li.signup-bar-0__to-do
+          お届け先住所入力
+          .progress-status3-0
+        %li.signup-bar-0__to-do
+          支払い方法
+          .progress-status4-0
+        %li.signup-bar-0__to-do
+          完了
+          .progress-status5-0
+
+.container-login-signin
+  .signup-main-0
+
+    .signup-panel
+      %p.signup-panel__title 会員情報登録
+
+      .signup-panel__content
+        .signup-panel__inherit
+          .signup-panel__inherit__form-group
+            %label.nickname
+              ニックネーム
+            %span.require
+              必須
+            %input.signup-panel__inherit__input-default{placeholder: "例） フリマ太郎"}
+            
+          .signup-panel__inherit__form-group__center
+            %label.email
+              メールアドレス
+            %span.require
+              必須
+            %input.signup-panel__inherit__input-default{placeholder: "PC・携帯どちらでも可"}
+
+          .signup-panel__inherit__form-group__end
+            %label.password
+              パスワード
+            %span.require
+              必須
+            %input.signup-panel__inherit__input-default{placeholder: "7文字以上"}
+
+          .signup-panel__inherit__form-group__end__password
+            .signup-panel__inherit__form-group__end__password__checkbox
+              %input.checkbox
+              %i.icon-checkbox
+              %label.passview
+                パスワードを表示する
+
+          .signup-panel__inherit__form-group__identification
+            %h3.ident
+              本人確認
+            %p.ident-text
+              安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+
+          .signup-panel__inherit__form-group__name
+            .signup-panel__inherit__form-group__name__detail
+              %label.name
+                お名前（全角）
+              %span.require
+                必須
+          %input.signup-panel__inherit__input-default__main__1{placeholder: "例）山田"}
+          %input.signup-panel__inherit__input-default__main__2{placeholder: "例）彩"}
+
+          .signup-panel__inherit__form-group__name
+            .signup-panel__inherit__form-group__name__detail
+              %label.name
+                お名前カナ（全角）
+              %span.require
+                必須
+          %input.signup-panel__inherit__input-default__main__3{placeholder: "例）ヤマダ"}
+          %input.signup-panel__inherit__input-default__main__4{placeholder: "例）アヤ"}
+
+          .signup-panel__inherit__form-group__name
+            .signup-panel__inherit__form-group__name__detail
+              %label.name
+                生年月日
+              %span.require
+                必須
+          .signup-panel__inherit__form-group__birthday
+            .signup-panel__inherit__form-group__birthday__1
+              %select{name: "year", class: "select"}
+                %option{value: ""}--
+                %option{value: "2019"} 2019
+                %option{value: "2018"} 2018
+              .birthday__icon
+                %i.fas.fa-angle-down
+            年
+
+            .signup-panel__inherit__form-group__birthday__2
+              %select{name: "month", class: "select"}
+                %option{value: ""}--
+                %option{value: "1"} 1
+                %option{value: "2"} 2
+              .birthday__icon
+                %i.fas.fa-angle-down
+            月
+            .signup-panel__inherit__form-group__birthday__3
+              %select{name: "date", class: "select"}
+                %option{value: ""}--
+                %option{value: "1"} 1
+                %option{value: "2"} 2
+              .birthday__icon
+                %i.fas.fa-angle-down
+            日
+
+        %p.caution
+          ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+
+        .not-lobot
+          %input.not-lobot__hidden
+          .not-lobot__form-group
+            .not-lobo__form-group__main
+
+          .signup-panel__inherit__form-group__description
+            %p.signup-panel__inherit__form-group__description__text
+              「次へ進む」のボタンを押すことにより、
+              %a.signup-panel__inherit__form-group__description__text__link{href: ''}利用規約
+              に同意したものとみなします
+
+          %button.next-current_page
+            =link_to "/users/phone",class: "next-page-1" do
+              次へ進む
+            
+          .signup-panel__inherit__form-group__text
+            %p.description
+              %a.description__link{href: ''}本人の情報登録について＞
+
+%footer.user-footer
+  %nav
+    %ul.user-footer-container
+      %li.user-footer-menu
+        .user-footer-menu__1 プライバシーポリシー 
+      %li.user-footer-menu
+        .user-footer-menu__1 Fmarket利用規約
+      %li.user-footer-menu
+        .user-footer-menu__1 特定商品に関する表記 
+  .user-footer__link
+    = link_to root_path do
+      = image_tag "/assets/SVG/logo_gray.svg", alt: "Mercari", class:".user-footer-img", width: "80", height: "60"  
+    %p.user-footer__end
+      %small.user-footer__year ©︎2019 Fmarket
