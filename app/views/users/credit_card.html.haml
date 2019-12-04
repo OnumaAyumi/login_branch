@@ -1,0 +1,114 @@
+%header.signup-header
+  .signup-header__containar
+    %h1.signup-header__containar__title
+      .signup-header__containar__title__img
+        = image_tag "/assets/SVG/fmarket_logo_red.svg", alt: "Mercari",class: "sign-up_img"
+
+    %nav.signup-bar-4
+      %ol.signup-bar-4__to
+        %li.signup-bar-4__to-do
+          会員情報
+          .progress-status1-4
+        %li.signup-bar-4__to-do
+          電話番号認証
+          .progress-status2-4
+        %li.signup-bar-4__to-do
+          お届け先住所入力
+          .progress-status3-4
+        %li.li--active-4
+          支払い方法
+          .progress-status4-4
+        %li.signup-bar-4__to-do
+          完了
+          .progress-status5-4
+
+.main__credit-container
+  .credit__content
+    %section.chapter__container
+      %h2.chapter__head 支払い方法
+      = form_tag('/credit_card', method: :post, action: "create", id: 'charge-form',  name: "inputForm", class: "chapter__container__inner") do
+        .form__main__container
+          .form__content
+            %label.payment__card
+              カード番号
+            %span.require__form
+              必須
+            = text_field_tag "number", "", class: "number-input__deafult", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
+            .image-credit
+              = image_tag src="http://manual.estore.co.jp/shared/mg_sozai/card_m_all.gif", size: "300x30"
+
+          .form__content-top__margin
+            %label.payment__card
+              有効期限
+            %span.require__form
+              必須
+
+          .select__box-top__margin
+            .select__box__half
+              %select.select__default#exp_month{name: "exp_month", type: "text"}
+                %option{value: ""} --
+                %option{value: "1"}01
+                %option{value: "2"}02
+                %option{value: "3"}03
+                %option{value: "4"}04
+                %option{value: "5"}05
+                %option{value: "6"}06
+                %option{value: "7"}07
+                %option{value: "8"}08
+                %option{value: "9"}09
+                %option{value: "10"}10
+                %option{value: "11"}11
+                %option{value: "12"}12
+              .expiration-date-icon
+                %i.fas.fa-angle-down
+            %span 月
+
+            .select__box__half-2
+              %select.select__default#exp_year{name: "exp_year", type: "text"}
+                %option{value: ""} --
+                %option{value: "2019"}19
+                %option{value: "2020"}20
+                %option{value: "2021"}21
+                %option{value: "2022"}22
+                %option{value: "2023"}23
+                %option{value: "2024"}24
+                %option{value: "2025"}25
+                %option{value: "2026"}26
+                %option{value: "2027"}27
+                %option{value: "2028"}28
+                %option{value: "2029"}29
+              .expiration-date-icon
+                %i.fas.fa-angle-down
+            %span 年
+      
+          .form__content-top__margin-2
+            %label.security-code
+              セキュリティーコード
+            %span.require__form
+              必須
+            = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面4桁もしくは3桁の番号", maxlength: "4", id: "cvc"
+
+            .single__code
+              = link_to "#",class: "single__code__text" do
+                %i.fas.fa-question-circle
+                %span カード裏面の番号とは？
+          -# #card_token
+          -# = submit_tag "追加する", id: "token_submit", class: "top__margin"
+          %button.next-current_page-credit
+            = link_to create_finish_users_path,class:"create_finish_link"do
+              次へ進む
+
+%footer.user-footer
+  %nav
+    %ul.user-footer-container
+      %li.user-footer-menu
+        .user-footer-menu__1 プライバシーポリシー 
+      %li.user-footer-menu
+        .user-footer-menu__1 Fmarket利用規約
+      %li.user-footer-menu
+        .user-footer-menu__1 特定商品に関する表記 
+  .user-footer__link
+    = link_to root_path do
+      = image_tag "/assets/SVG/logo_gray.svg", alt: "Mercari", class:".user-footer-img", width: "80", height: "60"  
+  %h1.user-footer__end
+    %small.user-footer__year ©︎2019 Fmarket

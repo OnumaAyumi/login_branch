@@ -131,7 +131,7 @@
               に同意したものとみなします
 
           %button.next-current_page
-            =link_to "/users/phone",class: "next-page-1" do
+            =link_to phone_users_path,class: "next-page-1" do
               次へ進む
             
           .signup-panel__inherit__form-group__text
@@ -150,5 +150,5 @@
   .user-footer__link
     = link_to root_path do
       = image_tag "/assets/SVG/logo_gray.svg", alt: "Mercari", class:".user-footer-img", width: "80", height: "60"  
-    %p.user-footer__end
-      %small.user-footer__year ©︎2019 Fmarket
+  %h1.user-footer__end
+    %small.user-footer__year ©︎2019 Fmarket

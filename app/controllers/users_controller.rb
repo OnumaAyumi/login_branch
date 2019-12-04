@@ -8,4 +8,15 @@ class UsersController < ApplicationController
   def phone
   end
 
+  def phone_authentication
+  end
+
+  def delivery_address
+  end
+
+  def credit_card
+  end
+
+  def create_finish
+  end
 end

@@ -1,0 +1,80 @@
+%header.signup-header
+  .signup-header__containar
+    %h1.signup-header__containar__title
+      .signup-header__containar__title__img
+        = image_tag "/assets/SVG/fmarket_logo_red.svg", alt: "Mercari",class: "sign-up_img"
+
+
+    %nav.signup-bar-2
+      %ol.signup-bar-2__to
+        %li.signup-bar-2__to-do
+          会員情報
+          .progress-status1-2
+        %li.li--active-2
+          電話番号認証
+          .progress-status2-2
+        %li.signup-bar-2__to-do
+          お届け先住所入力
+          .progress-status3-2
+        %li.signup-bar-2__to-do
+          支払い方法
+          .progress-status4-2
+        %li.signup-bar-2__to-do
+          完了
+          .progress-status5-2
+
+.authentication-container
+  .main-authentication-number
+    .signup-panel-3
+      %p.signup-panel-3__title 電話番号認証
+
+      .signup-panel-3__content
+        .signup-panel-3__inherit
+          .signup-panel-3__inherit__form-group-2
+            %label.phone-number-authentication
+              認証番号
+            %input.signup-panel-3__inherit-2__input-default{placeholder: "認証番号を入力"}
+          %p.caution-3
+            SMSで届いた認証番号を入力してください
+          %button.authentication-finish
+            = link_to delivery_address_users_path,class:"authentication-finish-link"do
+              認証して完了
+
+      .signup-panel__content-tell
+        .signup-panel__inherit-tell
+          .signup-panel__inherit-tell__form-group-tell
+            %h3.not-send
+              30秒たっても認証番号が届かない方へ
+          %p.tell-listen
+            電話で認証番号を聞くこともできます。
+          %button.tell-listen-number
+            電話で認証番号を聞く （通話無料）
+      
+      .signup-panel__content-tell-again
+        .signup-panel__inherit-again
+          .signup-panel__inherit-again__form-group-again
+            %h3.phone-number-again
+              認証番号を再送することもできます。もう一度電話番号を入力して下さい。
+            %p.phone-number-input
+              = link_to "#",class: "phone-input" do
+                電話番号を再度入力する
+            %p.phone-number-input-again
+              ※SMSが届かない場合は
+              = link_to "#",class: "phone-input-2" do
+                SMS受信設定
+              を確認して、もう一度電話番号を入力してください。
+
+%footer.user-footer
+  %nav
+    %ul.user-footer-container
+      %li.user-footer-menu
+        .user-footer-menu__1 プライバシーポリシー 
+      %li.user-footer-menu
+        .user-footer-menu__1 Fmarket利用規約
+      %li.user-footer-menu
+        .user-footer-menu__1 特定商品に関する表記 
+  .user-footer__link
+    = link_to root_path do
+      = image_tag "/assets/SVG/logo_gray.svg", alt: "Mercari", class:".user-footer-img", width: "80", height: "60"  
+  %h1.user-footer__end
+    %small.user-footer__year ©︎2019 Fmarket

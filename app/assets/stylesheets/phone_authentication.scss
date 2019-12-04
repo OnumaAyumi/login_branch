@@ -1,0 +1,330 @@
+@mixin status_bar($width,$background:#ccc) {
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  content: '';
+  width: $width;
+  height: 2px;
+  background: $background;
+ }
+ @mixin status($color:#ccc){
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  border-radius: 50%;
+  background:$color
+}
+
+.signup-header{
+  height: 128px;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  
+  &__containar {
+    display: inline-flex;
+    &__title{
+      padding: 40px 35px 0;
+      &__img{
+        width: 185px;
+        height: 49px;
+        line-height: 49px;
+        .sign-up_img{
+          width: 185px;
+          height: 49px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .signup-bar-2 {
+      border: 0;
+      padding: 40px 0 0 24px;
+
+      &__to{
+        display: inline-flex;
+        .li--active-2{
+          color: #ea352d;
+          position: relative;
+          margin: 0 40px 0 0;
+          z-index: 1;
+          display: inline-block;
+          font-size: 12px;
+          min-width: 60px;
+          font-weight: 600;
+          .progress-status2-2{
+            @include status(#ea352d);
+          }
+          .progress-status2-2::before{
+            @include status_bar(175%)
+          }
+        }
+
+          .signup-bar-2__to-do{
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            min-width: 40px;
+            font-size: 12px;
+            color: #888;
+            margin: 0 40px 0 0;
+            position: relative;
+
+          .progress-status1-2{
+            @include status(#ea352d);
+          }
+          .progress-status3-2{
+            @include status
+          }
+          .progress-status4-2{
+            @include status
+          }
+          .progress-status5-2{
+            @include status
+          }
+          .progress-status1-2::before{
+            @include status_bar(210%,#ea352d)
+          }
+          .progress-status3-2::before{
+            @include status_bar(125%)
+          }
+          .progress-status4-2::before{
+            @include status_bar(166%)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.authentication-container{
+  background: rgb(245, 245, 245);
+  text-align: center;
+
+  .main-authentication-number{
+    height: 693px;
+    width: 919px;
+    margin: 0 auto;
+    padding: 0;
+    .signup-panel-3 {
+      max-width: 700px;
+      height: 693px;
+      margin: 0 auto;
+      background-color: white;
+
+      &__title {
+        padding: 32px;
+        font-size: 22px;
+        font-weight: bold;
+      }  
+          
+      &__content{
+        border-top: 1px solid #eee;
+        height: 173px;
+        width: 668px;
+        padding: 24px 16px 40px;
+      }
+      &__inherit{
+        height: 282px;
+        width: 343px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .phone-number-authentication{
+    font-weight: 600;
+    font-size: 14px;
+    float: left;
+    font-family: "Source Sans Pro", Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  }
+  
+  .signup-panel-3__inherit-2__input-default{
+    height: 28px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-top: 8px;
+    width: 309px;
+    display: flex;
+  }
+} 
+.caution-3{
+  font-family: "Source Sans Pro", Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+  color: rgb(51,51,51);
+  display: block;
+  padding: 0;
+  text-align: initial;
+  height: 21px;
+  width: 343px;
+  margin: 8px 0 0;
+}
+
+.authentication-finish{
+  margin: 24px 0 0;
+  width: 341px;
+  height: 48px;
+  margin-top: 24px;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  font-size: 14px;
+  .authentication-finish-link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+}
+
+.signup-panel__content-tell{
+  border-top: 1px solid #eee;
+  height: 119px;
+  width: 668px;
+  padding: 24px 16px 40px;
+  .signup-panel__inherit-tell{
+    height: 119px;
+    width: 343px;
+    margin: 0 auto;
+  }
+}
+.signup-panel__inherit-tell__form-group-tell{
+  .not-send{
+    border-style: solid;
+    border-width: 0;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    height: 16px;
+    width: 343px;
+    text-align: left;
+    font-weight: bold;
+  }
+}          
+  .tell-listen{
+    font-family: "Source Sans Pro", Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
+    color: rgb(51,51,51);
+    display: block;
+    padding: 0;
+    text-align: initial;
+    height: 21px;
+    width: 343px;
+    margin: 8px 0 0;
+  }
+        
+  .tell-listen-number{        
+    margin: 24px 0 0;
+    width: 341px;
+    height: 48px;
+    margin-top: 24px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    font-size: 14px;
+  }
+           
+  .signup-panel__content-tell-again{
+    border-top: 1px solid #eee;
+    height: 111px;
+    width: 668px;
+    padding: 24px 16px 40px;
+    .signup-panel__inherit-again{
+      height: 111px;
+      width: 343px;
+      margin: 0 auto;
+    }
+  }
+  .signup-panel__inherit-again__form-group-again{
+    .phone-number-again{
+      border-style: solid;
+      border-width: 0;
+      font-size: 16px;
+      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+      height: 32px;
+      width: 343px;
+      text-align: left;
+      color: #333333;
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      margin:0;
+      line-height: 2ex;
+    }
+  }          
+  .phone-number-input{
+    margin: 8px 0 0;
+    line-height: 1.5;
+    height: 21px;
+    width: 343px;
+    text-align: left;
+  }
+  .phone-input{
+    color: #0099e8;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .phone-number-input-again{
+    height: 42px;
+    width: 343px;
+    margin: 8px 0 0;
+    padding: 0;
+    text-align: left;
+    font-size: 13.5px;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  }         
+  .phone-input-2{
+    color: #0099e8;
+    text-decoration: none;
+    font-size: 13.5px;
+  }
+  .user-footer {
+    background: rgb(245, 245, 245);
+    text-align: center;
+    height: 220px;
+    margin: 0 auto;
+    padding: 40px 0;
+    .user-footer-container {
+      list-style: none;
+    }
+    .user-footer-menu{
+      display: inline-block;
+      margin: 0 0 0 16px;
+      font-size: 12px;
+      &__1{
+        text-decoration: none;
+        color: black;
+      }
+    }
+  
+    li:first-child {
+      display: inline-block;
+      margin: 0;
+    }
+    .user-footer__link {
+      width: 80px;
+      height: 65px;
+      margin: 40px auto 0;
+      .user-footer-img{
+        width: 80px;
+        height: 65px;
+        margin: 40px auto 0;
+      }
+    }
+    .user-footer__end{
+      margin: auto;
+      padding: 0;
+      width: 456px;
+      height: 14px;
+      .user-footer__year{
+        font-size: 13px;
+      }
+    }
+  }

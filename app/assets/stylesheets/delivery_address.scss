@@ -1,4 +1,4 @@
-@mixin status_bar($width,$background:#ccc) {
+@mixin status_bar($width,$color:#ccc) {
   position: absolute;
   bottom: 5px;
   z-index: -1;
@@ -6,7 +6,7 @@
   content: '';
   width: $width;
   height: 2px;
-  background: $background;
+  background:$color;
  }
  @mixin status($color:#ccc){
   width: 12px;
@@ -37,13 +37,13 @@
       }
     }
 
-    .signup-bar-1 {
+    .signup-bar-3 {
       border: 0;
       padding: 40px 0 0 24px;
 
       &__to{
         display: inline-flex;
-        .li--active-1{
+        .li--active-3{
           color: #ea352d;
           position: relative;
           margin: 0 40px 0 0;
@@ -52,15 +52,15 @@
           font-size: 12px;
           min-width: 60px;
           font-weight: 600;
-          .progress-status2-1{
+          .progress-status3-3{
             @include status(#ea352d);
           }
-          .progress-status2-1::before{
-            @include status_bar(175%)
+          .progress-status3-3::before{
+            @include status_bar(125%)
           }
         }
 
-          .signup-bar-1__to-do{
+          .signup-bar-3__to-do{
             position: relative;
             z-index: 1;
             display: inline-block;
@@ -70,25 +70,27 @@
             margin: 0 40px 0 0;
             position: relative;
 
-          .progress-status1-1{
+          .progress-status1-3{
             @include status(#ea352d);
           }
-          .progress-status3-1{
+          .progress-status2-3{
+            @include status(#ea352d);
+          }
+          
+          .progress-status4-3{
             @include status
           }
-          .progress-status4-1{
+          .progress-status5-3{
             @include status
           }
-          .progress-status5-1{
-            @include status
-          }
-          .progress-status1-1::before{
+          .progress-status1-3::before{
             @include status_bar(210%,#ea352d)
           }
-          .progress-status3-1::before{
-            @include status_bar(125%)
+          .progress-status2-3::before{
+            @include status_bar(175%,#ea352d)
           }
-          .progress-status4-1::before{
+          
+          .progress-status4-3::before{
             @include status_bar(166%)
           }
         }
@@ -97,17 +99,14 @@
   }
 }
 
-.container-login-phone-number {
+
+.container-delivery {
   background: rgb(245, 245, 245);
   text-align: center;
 
-  .main-phone-number {
-    height: 442px;
-    width: 919px;
-    margin: 0 auto;
-    .signup-panel {
+  &__main {
+    .signup-panel-5 {
       max-width: 700px;
-      height: 442px;
       margin: 0 auto;
       background-color: white;
 
@@ -117,27 +116,60 @@
         font-weight: bold;
       }  
           
-      &__content-2{
+      &__content{
         border-top: 1px solid #eee;
-        height: 282px;
+        height: 1000px;
         width: 668px;
         padding: 24px 16px 40px;
       }
-      &__inherit-2{
-        height: 282px;
+      &__inherit{
+        height: 731px;
         width: 343px;
         margin: 0 auto;
       }
     }
   }
+  .signup-panel-5__inherit__form-group{
+    margin-top: 24px;
+    width: 343px;
+    height: 70px;
+    &__center{
+      margin: 0;
+    }
+    &__end{
+      margin-top: 24px;
+    }
+  }
 
-  .phone-number{
+  .new-user-create{
     font-weight: 600;
     font-size: 14px;
     float: left;
+    margin: 0 8px 0 0;
   }
-  
-  .signup-panel__inherit-2__input-default{
+  .require-5{
+    background: #ea352d;
+    margin:0 8px 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    display: flex;
+    width: 25px;
+  }
+  .any-5{
+    background: #ccc;
+    margin:0 8px 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    display: flex;
+    width: 25px;
+  }
+  .signup-panel-5__inherit__input-default{
     height: 28px;
     padding: 10px 16px 8px;
     border-radius: 4px;
@@ -149,56 +181,22 @@
     width: 309px;
     display: flex;
   }
-} 
-.caution-2{
-  font-family: "Source Sans Pro", Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-  line-height: 1.5;
-  font-size: 14px;
-  color: rgb(51,51,51);
-  display: block;
-  padding: 0;
-  text-align: initial;
-  height: 42px;
-  width: 343px;
-  margin: 8px 0 0;
+
 }
 
-.sns-send{
-  margin: 24px 0 0;
+
+.next-current_page-5{
   width: 341px;
   height: 48px;
   margin-top: 24px;
   background: #ea352d;
   border: 1px solid #ea352d;
-  font-size: 14px;
-  .sns_send__link{
+  .credit_card_link{
     color: #fff;
     text-decoration: none;
     font-size: 14px;
   }
 }
-.signup-panel__inherit-2__form-group-2__description__text{
-  font-size: 14px;
-  color: #333;
-  margin: 8px 0 0;
-}
-
-.signup-panel__inherit-2__form-group-2__text-2{
-  width: 343px;
-  height: 42px;
-  margin: 24px 0 0;
-  text-align: right;
-  font-family: "Source Sans Pro", Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-}
-
-  
-.description-2__link{
-  font-family: "Source Sans Pro", Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-  color: #0099e8;
-  text-decoration: none;
-  font-size:14px;
-}
-
 
 
 
