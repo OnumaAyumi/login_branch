@@ -146,8 +146,12 @@
   height: 48px;
   background: #ea352d;
   border: 1px solid #ea352d;
-  color: #fff;
-  font-size: 14px;
+  
+  .top-page_link{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+  }
 }
 
 .image-cloth{

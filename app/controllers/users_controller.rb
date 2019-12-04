@@ -19,4 +19,11 @@ class UsersController < ApplicationController
 
   def create_finish
   end
+
+  def login
+  end
+
+  def purchase_confirmation
+  end
+  
 end

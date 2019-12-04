@@ -33,7 +33,8 @@
           %br
           会員登録が完了しました。
         %button.new-start
-          Fmarketをはじめる
+          = link_to login_users_path ,class: "top-page_link" do
+            Fmarketをはじめる
     .image-cloth
       = image_tag src="https://cdn.pixabay.com/photo/2016/11/19/15/40/clothes-1839935_1280.jpg", size: "700x350"
 

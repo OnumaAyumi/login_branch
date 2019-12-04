@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       get "delivery_address"
       get "credit_card"
       get "create_finish"
+      get "login"
+      get "purchase_confirmation"
     end
   end
 
