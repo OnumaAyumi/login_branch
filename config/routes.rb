@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
   root to: 'users#index'
   resources :items, only: [:new, :create]
+  resources :users ,except: :destroy do
+    collection do 
+      get "signup_new"
+      get "phone"
+      get "phone_authentication"
+      get "delivery_address"
+      get "credit_card"
+      get "create_finish"
+      get "login"
+      get "purchase_confirmation"
+    end
+  end
 end
