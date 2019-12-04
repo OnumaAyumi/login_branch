@@ -10,22 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_22_062041) do
+ActiveRecord::Schema.define(version: 2019_12_04_031319) do
+
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.string "name"
+    t.index ["ancestry"], name: "index_categories_on_ancestry"
+  end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "image"
     t.string "ship_way"
-    t.string "ship_price"
+    t.string "ship_place"
     t.string "ship_date"
     t.string "condition"
-    t.integer "user_id"
     t.integer "price"
-    t.integer "categoty_id"
     t.integer "place_id"
     t.integer "bland_id"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_items_on_category_id"
   end
 
+  add_foreign_key "items", "categories"
 end
