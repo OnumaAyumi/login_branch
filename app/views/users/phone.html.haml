@@ -39,7 +39,8 @@
           %p.caution-2
             本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
           %button.sns-send
-            SNSを送信する
+            = link_to phone_authentication_users_path,class:"sns_send__link"do
+              SNSを送信する
           %p.signup-panel__inherit-2__form-group-2__description__text
             ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
           .signup-panel__inherit-2__form-group-2__text-2
@@ -57,5 +58,5 @@
   .user-footer__link
     = link_to root_path do
       = image_tag "/assets/SVG/logo_gray.svg", alt: "Mercari", class:".user-footer-img", width: "80", height: "60"  
-    %p.user-footer__end
-      %small.user-footer__year ©︎2019 Fmarket
+  %h1.user-footer__end
+    %small.user-footer__year ©︎2019 Fmarket

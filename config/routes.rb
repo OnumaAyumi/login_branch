@@ -5,7 +5,10 @@ Rails.application.routes.draw do
     collection do 
       get "signup_new"
       get "phone"
-      get "step3"
+      get "phone_authentication"
+      get "delivery_address"
+      get "credit_card"
+      get "create_finish"
     end
   end
 
