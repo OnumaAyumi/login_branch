@@ -58,7 +58,7 @@
                     必須
                 %div
                   .main-container__sell__inner__clearfix__form2__box1__select
-                    = f.collection_select :condition, @condition, :first, :second, {prompt: "---"}, {class: "main-container__sell__inner__clearfix__form2__box1__select__1"}
+                    = f.select :condition, Item.conditions.keys, {prompt: "---"}, {class: "main-container__sell__inner__clearfix__form2__box1__select__1"}
                     %i.fas.fa-angle-down
           
           .main-container__sell__inner__sell
@@ -72,7 +72,7 @@
                   %span.main-container__sell__inner__sell__form__box1__require
                     必須
                 .main-container__sell__inner__sell__form__box1__select
-                  = f.collection_select :ship_way, @ship_way, :first, :second, {prompt: "---"}, {class: "main-container__sell__inner__sell__form__box1__select__1"}
+                  = f.select :ship_way, Item.ship_ways.keys, {prompt: "---"}, {class: "main-container__sell__inner__sell__form__box1__select__1"}
                   %i.fas.fa-angle-down
 
               .main-container__sell__inner__sell__form__box2
@@ -81,7 +81,7 @@
                   %span.main-container__sell__inner__sell__form__box2__require
                     必須
                 .main-container__sell__inner__sell__form__box2__select
-                  = f.collection_select :ship_place, @ship_place, :first, :second, {prompt: "---"}, {class: "main-container__sell__inner__sell__form__box2__select__1"}
+                  = f.select :ship_place, Item.ship_places.keys, {prompt: "---"}, {class: "main-container__sell__inner__sell__form__box2__select__1"}
                   %i.fas.fa-angle-down
 
               .main-container__sell__inner__sell__form__box4
@@ -99,7 +99,7 @@
                   %span.main-container__sell__inner__sell__form__box3__require
                     必須
                 .main-container__sell__inner__sell__form__box3__select
-                  = f.collection_select :ship_date, @ship_date, :first, :second, {prompt: "---"}, {class: "main-container__sell__inner__sell__form__box3__select__1"}
+                  = f.select :ship_date, Item.ship_dates.keys, {prompt: "---"}, {class: "main-container__sell__inner__sell__form__box3__select__1"}
                   %i.fas.fa-angle-down
 
           .main-container__sell__inner__price
