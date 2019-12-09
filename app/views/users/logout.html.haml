@@ -1,0 +1,12 @@
+= render 'devise/shared/header'
+
+%main.major
+  .r-content
+    .logout-container
+      .logout-container__main
+        = form_with(class: "logout") do
+          .logout-botton-container
+            %botton.logout-botton ログアウト
+  = render 'devise/shared/sidebar'
+
+= render 'devise/shared/footer'

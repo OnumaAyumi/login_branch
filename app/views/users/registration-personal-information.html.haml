@@ -1,0 +1,75 @@
+= render 'devise/shared/header'
+
+%main.major
+  .r-content
+    .registration-container
+      .registration-container__main
+        %h2.registration-container__main__panel 本人情報の登録
+        = form_with(class: "registration-detail") 
+        .registration-container__main__please
+          %p.registration-please-text
+            お客さまの本人情報をご登録ください。
+            %br
+            登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+          %p.registration-please-link
+            = link_to root_path ,class:"registration-please-link-text"do
+              本人確認書類のアップロードについて＞
+        
+        .registration-input-form
+          %label.registration-input-form-text お名前
+          %p.registration-input-form-detail お萩 餡子
+        .registration-input-form
+          %label.registration-input-form-text お名前カナ
+          %p.registration-input-form-detail オハギ アンコ
+        .registration-input-form
+          %label.registration-input-form-text 生年月日
+          %p.registration-input-form-detail 2020/20/20
+          
+        .registration-input-form-2
+          %label.registration-edit
+            郵便番号
+          %span.registration-any
+            任意
+          %input.registration-edit-default{placeholder: "例）123ー4567"}
+        
+        .registration-input-form-2
+          %label.registration-edit
+            都道府県
+          %span.registration-any
+            任意
+          %input.registration-edit-default-2{placeholder: "例）神奈川県"}
+          .registrate-icon
+            %i.fas.fa-angle-down
+
+        .registration-input-form-2
+          %label.registration-edit
+            市町村区
+          %span.registration-any
+            任意
+          %input.registration-edit-default{placeholder: "例）横浜市緑区"}
+
+        .registration-input-form-2
+          %label.registration-edit
+            番地
+          %span.registration-any
+            任意
+          %input.registration-edit-default{placeholder: "例）青山1-1-1"}
+
+        .registration-input-form-2
+          %label.registration-edit
+            建物名
+          %span.registration-any
+            任意
+          %input.registration-edit-default{placeholder: "例）柳ビル103"}
+
+        %button.registration-finish-button
+          = link_to root_path,class:"registration-finish_link"do
+            登録する
+
+        .registration-input-about
+          %p.registration-input-about-content
+            =link_to root_path,class:"registration-input-about-link"do
+              本人情報の登録について＞
+
+  = render 'devise/shared/sidebar'
+= render 'devise/shared/footer'
