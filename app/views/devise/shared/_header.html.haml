@@ -32,10 +32,10 @@
             = icon "far", "bell", class: "bell"
             ログイン
         %li.nav__list__b
-          =link_to destroy_user_session_path, method: :delete,class: "select2" do
+          =link_to "#", method: :delete,class: "select2" do
             = icon "fa", "check", class: "check"
             ログアウト
         %li.nav__list__c
           =link_to "/users/sign_up", class: "select2" do
             = image_tag "/images/user.png", alt: "Unknown", class: "user-image"
-            = @user.nickname
+       
